@@ -31,7 +31,7 @@ header .cover {
   height: 200px;
   max-width: 250px;
   max-height: 250px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 @media (min-width: 576px) {
@@ -43,8 +43,8 @@ header .cover {
 }
 
 .hobbie {
-  border: 2px #333 solid;
-  border-radius: 3px;
+  /* border: 2px #333 solid; */
+  /* border-radius: 3px; */
   font-size: 15px;
   background-color: #fff;
   color: black;
