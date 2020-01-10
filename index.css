@@ -22,6 +22,10 @@ header .cover {
   fill: rgba(255, 255, 255, 0.6);
 }
 
+.footer-icon {
+  fill: rgba(0,0,0,0, 0.6);
+}
+
 .light {
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -69,6 +73,12 @@ header .cover {
   padding: 5px 5px;
   margin-right: 12px;
 }
+
+.contact-icon {
+  height: 60px;
+  width: 60px;
+}
+
 
 /* Technical Skills Progress Bar */
 .skills_progresses .progress {
