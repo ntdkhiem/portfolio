@@ -1,2 +1,0 @@
-head: https://tailwind.run/BhGn2S/2
-about: https://tailwind.run/ZdCQSL/6
