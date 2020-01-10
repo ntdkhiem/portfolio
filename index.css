@@ -23,7 +23,7 @@ header .cover {
 }
 
 .light {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #hero {
@@ -127,4 +127,79 @@ header .cover {
 
 .skills_progresses .progress-meter > .meter.meter-right > .meter-text {
   text-align: right;
+}
+
+/* Projects section style */
+.hover {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 60%;
+}
+
+.hover-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+  transition: all 0.4s;
+}
+
+.hover img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hover-title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+.hover-description {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  text-align: center;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+.hover-info {
+  position: absolute;
+  margin-top: 5px;
+  margin-right: 5px;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+.hover:hover .hover-title {
+  transform: translateY(-1.5rem);
+}
+
+.hover:hover .hover-description {
+  bottom: 0.5rem;
+  opacity: 1;
+}
+
+.hover:hover .hover-info {
+  opacity: 1;
+}
+
+.hover:hover .hover-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
 }
