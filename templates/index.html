@@ -14,11 +14,17 @@
       rel="stylesheet"
       href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"
     />
-    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"
+    />
     <title>KHIEM | Portfolio</title>
   </head>
-  <body>
-    <header>
+  <!-- TODO: Add porfolio page: contains all CS-related activities -->
+  <!-- TODO: Add loading screen -->
+  <!-- TODO: add a switch button for dark theme -->
+  <body class="bg-light">
+    <header style="background-image: url({{ url_for('static', filename='img/me-avatar.jpg') }});">
       <div class="cover">
         <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
           <div class="container">
@@ -43,10 +49,10 @@
                   >
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item mx-2">
-                  <a class="nav-link" href="#">Projects</a>
+                  <a class="nav-link" href="#">Portfolio</a>
                 </li>
               </ul>
               <div class="d-flex flex-row">
@@ -100,6 +106,11 @@
             src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9"
             alt="avatar"
           />
+          <!-- <img
+            class="img-thumbnail img-avatar mb-2 rounded-circle"
+            src="{{ url_for('static', filename='img/me-avatar(1).jpg') }}"
+            alt="avatar"
+          /> -->
           <p class="lead mb-0">Hi, I'm</p>
           <h1>Khiem Nguyen</h1>
           <p class="lead">A curious and passionate Computer Science Student!</p>
@@ -118,7 +129,7 @@
             <img
               id="img-me"
               class="img-fluid img-thumbnail shadow"
-              src="img/me-sm.jpg"
+              src="{{ url_for('static', filename='img/me-sm.jpg') }}"
               alt="Me"
             />
           </div>
@@ -130,20 +141,24 @@
                 A curious and passionate Computer Science Student
               </p>
               <p class="muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cupiditate delectus aperiam perferendis harum earum, eos neque
-                quaerat corporis, nulla velit excepturi commodi deleniti ratione
-                vel. Possimus voluptatum quibusdam nisi illum, nostrum voluptate
-                doloremque incidunt facere non laudantium in id eum? Laudantium
-                quidem id aspernatur vitae distinctio, adipisci eligendi quis
-                nihil.
+                When I arrived at United States on 2015, I always thought of all possibilities that I can have. 
+                I was amazed with the modern technologies that Americans used in their daily living. However, 
+                not everyone can have this opportunity to live such a comfort life like me and family who 
+                immigrated to America with zero knowledge of English. My parents fought to live in this foreign land 
+                to help me and my siblings to have a better life. My primary goal is to support my family to have more stable conditions
+                and have my parents do less work. My other goals are to learn as much from companies that I work for so that I could share my knowledges  
+                to others who did not have such an opportunity as me. 
+                <br>
+                <br>
+                I have a passion of learning new thing and never afraid to try new things. While learning is my thing, I also love to share what I learned to others 
+                by joining clubs and groups of developers who shared similar interests as me. I might be a shy person but I'm willing to do my best at anything :) 
               </p>
               <div class="d-flex flex-row">
                 <button class="btn btn-outline-danger mr-2">
-                  View Portfolio
+                  More Info
                 </button>
                 <button class="btn btn-outline-danger">
-                  Download Resume
+                  View Portfolio
                 </button>
               </div>
             </div>
@@ -268,6 +283,7 @@
           </div>
         </div>
       </section>
+      <!-- TODO: What I can offer section -->
       <section id="technical_skills" class="py-5">
         <!-- Row -->
         <div class="container row justify-content-center">
@@ -363,7 +379,11 @@
           <!-- Second col -->
           <div class="col-12 col-lg-5 align-self-center bg-red">
             <!-- An image of code -->
-            <img class="img-fluid" src="img/coding.jpg" alt="coding" />
+            <img
+              class="img-fluid"
+              src="{{url_for('static', filename='img/coding.jpg')}}"
+              alt="coding"
+            />
           </div>
         </div>
       </section>
@@ -375,7 +395,10 @@
         <div class="row justify-content-center">
           <div class="col-lg-4 mb-3">
             <div class="hover text-white rounded">
-              <img src="img/mhscs.png" alt="mhscs picture" />
+              <img
+                src="{{url_for('static', filename='img/mhscs.png')}}"
+                alt="mhscs picture"
+              />
               <div class="hover-overlay"></div>
               <div class="hover-content px-5 py-4">
                 <h3 class="hover-title text-uppercase font-weight-bold mb-0">
@@ -401,7 +424,10 @@
           </div>
           <div class="col-lg-4 mb-3">
             <div class="hover text-white rounded">
-              <img src="img/math-genie.jpg" alt="math genie picture" />
+              <img
+                src="{{url_for('static', filename='img/math-genie.jpg')}}"
+                alt="math genie picture"
+              />
               <div class="hover-overlay"></div>
               <div class="hover-content px-5 py-4">
                 <h3 class="hover-title text-uppercase font-weight-bold mb-0">
@@ -427,7 +453,10 @@
           </div>
           <div class="col-lg-4 mb-3">
             <div class="hover text-white rounded">
-              <img src="img/encryptdeword.jpg" alt="encrypt-de-word picture" />
+              <img
+                src="{{url_for('static', filename='img/encryptdeword.jpg')}}"
+                alt="encrypt-de-word picture"
+              />
               <div class="hover-overlay"></div>
               <div class="hover-content px-5 py-4">
                 <h3 class="hover-title text-uppercase font-weight-bold mb-0">
@@ -454,7 +483,7 @@
           </div>
           <div class="col-lg-4 mb-3">
             <div class="hover text-white rounded">
-              <img src="img/hordes-io.jpg" alt="hores.io bot picture" />
+              <img src="{{url_for('static', filename='img/hordes-io.jpg')}}" alt="hores.io bot picture" />
               <div class="hover-overlay"></div>
               <div class="hover-content px-5 py-4">
                 <h3 class="hover-title text-uppercase font-weight-bold mb-0">
@@ -480,11 +509,11 @@
           </div>
           <div class="col-lg-4 mb-3">
             <div class="hover text-white rounded">
-              <img src="img/my-portfolio.jpg" alt="my portfolio picture" />
+              <img src="{{url_for('static', filename='img/my-portfolio.jpg')}}" alt="my portfolio picture" />
               <div class="hover-overlay"></div>
               <div class="hover-content px-5 py-4">
                 <h3 class="hover-title text-uppercase font-weight-bold mb-0">
-                  My Portfolio
+                  This Portfolio
                 </h3>
                 <p class="hover-description text-uppercase mb-0">
                   My Portfolio website
@@ -505,16 +534,17 @@
             </div>
           </div>
         </div>
+        <a class="text-center" href="#!">Go to My Portfolio</a>
       </section>
       <!-- TODO: Maybe add black background to be more stand out -->
-      <section id="contact" class="py-5">
+      <section id="contact" class="pt-5 pb-3">
         <div class="title_and_description text-center mb-5">
           <h2>Contact Me</h2>
           <p class="muted">
             Drop me an email or contact me online !
           </p>
           <!-- TODO: contact form -->
-          <div class="row row-cols-1 row-cols-lg-3">
+          <div class="row row-cols-1 row-cols-lg-3 mt-5">
             <div class="col align-self-center">
               <div class="contact-icon mx-auto mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -643,6 +673,6 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
   </body>
 </html>
